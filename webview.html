@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>* {
+        margin: 0;
+        padding: 0;
+      }
+
+      .box {
+        padding: 12px;
+        border-bottom: 1px solid #000;
+        box-sizing: border-box;
+      }
+
+      h2 {
+        margin: 24px 0 16px 0;
+      }
+
+      h3 {
+        margin: 16px 0 8px 0;
+      }
+
+      .flex-box {
+        width: 100px;
+        display: flex;
+      }</style>
+  </head>
+  <body>
+    <div class="box">
+      <input id="button-navigate-back" type="button" value="navigate back">
+      <a href="http://192.168.50.241:3000/route1.html">go next page</a>
+    </div>
+
+    <div class="box">
+      <div class="flex-box">
+        <input type="button" id="button-show-navigation-bar-loading" value="show navigation bar loading">
+        <input type="button" id="button-hide-navigation-bar-loading" value="hide navigation bar loading">
+      </div>
+    </div>
+
+    <div class="box">
+      <div>
+        <input id="input-set-navigation-bar-title" type="text" placeholder="title">
+        <input id="button-set-navigation-bar-title" type="button" value="set navigation bar title">
+      </div>
+    </div>
+
+    <div class="box">
+      <div>
+        <input type="number" id="input-switch-tab" placeholder="index" value="0">
+        <input id="button-switch-tab" type="button" value="switch tab">
+      </div>
+    </div>
+
+    <div class="box">
+      <div>
+        <select id="select-set-navigation-bar-color">
+          <option value="light">light</option>
+          <option value="dark">dark</option>
+        </select>
+        <input id="input-set-navigation-bar-color" type="text" placeholder="front color">
+        <input id="button-set-navigation-bar-color" type="button" value="set navigation bar color">
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.bootcss.com/vConsole/3.2.0/vconsole.min.js"></script>
+  <script src="/vconsole.plugin.4ebe9b41.js"></script>
+  <script src="/webview.ffaccb38.js"></script>
+</html>
