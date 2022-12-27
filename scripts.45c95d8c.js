@@ -719,7 +719,7 @@ var JSSdk = /*#__PURE__*/function () {
     key: "hasPermission",
     value: function hasPermission(permission) {
       if (!this.doctor()) {
-        return false;
+        return '0';
       }
 
       switch (this.platform) {
@@ -727,10 +727,10 @@ var JSSdk = /*#__PURE__*/function () {
           return cmiot.hasPermission(permission);
 
         case "IOS":
-          return Number(window.prompt("hasPermission", method)) === 0 ? false : true;
+          return window.prompt("hasPermission", permission);
 
         default:
-          return false;
+          return '0';
       }
     }
   }, {
@@ -1901,6 +1901,14 @@ doc.getElementById('button-work-async-selectOrgNode').onclick = function () {
     }
   });
 };
+
+doc.getElementById('button-work-async-getDynamicUrl').onclick = function () {
+  var res = _jssdk.default.workSync({
+    method: 'getDynamicUrl'
+  });
+
+  console.log(res);
+};
 /******************** 10 Work End ********************/
 },{"../jssdk":"../src/jssdk.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -1930,7 +1938,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51556" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64638" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
